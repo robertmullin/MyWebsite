@@ -1,0 +1,320 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: url("../images/tile.jpg") top left repeat; }
+
+.wrapper {
+  max-width: 100%;
+  overflow: hidden; }
+
+a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #ff9904; }
+
+/* Navigation Styles */
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: black;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 1; }
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style-type: none; }
+  @media (min-width: 480px) {
+    .nav {
+      width: 100%;
+      justify-content: flex-end; } }
+
+.nav .name {
+  display: none;
+  margin-right: auto;
+  color: white; }
+  @media (min-width: 480px) {
+    .nav .name {
+      display: flex;
+      justify-content: flex-start; } }
+
+.nav li {
+  padding: 5px 10px; }
+
+.nav a {
+  transition: all .5s; }
+
+.nav a:hover {
+  color: white; }
+
+header {
+  text-align: center;
+  padding-top: 50px;
+  line-height: 1.5; }
+
+/* Hero Styles */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../images/torontoMobile-min.jpg") no-repeat top center;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 450px; }
+  @media (min-width: 480px) {
+    .hero {
+      width: 100%;
+      height: 550px;
+      background: url("../images/torontobackground-min.jpg");
+      background-attachment: fixed;
+      background-position: top;
+      background-repeat: no-repeat; } }
+
+.profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all .5s; }
+  @media (min-width: 480px) {
+    .profile-image {
+      margin: 2em; } }
+
+.profile-image:hover {
+  transform: scale(1.25) rotate(360deg); }
+
+.tag {
+  background-color: #efefef;
+  color: #222;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px auto; }
+
+.location {
+  background-color: #222;
+  color: #efefef; }
+
+/* Content Styles */
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center; }
+  @media (min-width: 480px) {
+    .container {
+      flex-direction: row; } }
+
+.card {
+  width: 95%;
+  text-align: left;
+  margin: 10px auto;
+  background: #fff;
+  border-bottom: 4px solid #ccc;
+  border-radius: 6px;
+  transition: all .5s; }
+  @media (min-width: 480px) {
+    .card {
+      width: 45%; } }
+
+#xp {
+  width: 95%; }
+  @media (min-width: 480px) {
+    #xp {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap; } }
+
+.card:hover {
+  border-bottom: 3px solid #000; }
+
+.card h2,
+.card p {
+  padding: 10px; }
+
+ul.skills {
+  padding: 0;
+  text-align: center; }
+
+.skills li {
+  border-radius: 6px;
+  display: inline-block;
+  background: #ff9904;
+  color: white;
+  padding: 5px 10px;
+  margin: 2px; }
+
+.skills li:nth-child(odd) {
+  background: #0399ff; }
+
+/* Portfolio Styles */
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: relative;
+  width: 100%; }
+  @media (min-width: 480px) {
+    .portfolio {
+      width: 45%; } }
+
+.portInfo {
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1.2em; }
+
+.portInfo h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center; }
+
+.portInfo p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  text-align: left; }
+
+.portfolio a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+  color: darkslategray; }
+
+.portimg {
+  align-self: center;
+  width: 95%;
+  height: 200px;
+  padding: 10px 0px;
+  opacity: .5;
+  position: relative; }
+
+/* CONTACT FORM STYLES */
+.contactCard {
+  display: none; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+form label {
+  width: 95%;
+  padding: 10px 0px;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1; }
+
+form input,
+form textarea {
+  width: 95%;
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1em;
+  align-self: center;
+  border-radius: 5px;
+  outline: 0;
+  border: 1px solid #eee; }
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #666666;
+  transition: ease-in-out .5s; }
+
+button {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0px;
+  background: #666666;
+  border: 0;
+  font-size: 1.25em;
+  color: #FFFFFF;
+  border-radius: 5px; }
+
+.contactimg {
+  width: 100%;
+  height: 300px; }
+
+/* Footer Styles */
+footer {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 30px;
+  font-size: 1.3em;
+  width: 100%;
+  margin: 10px auto; }
+
+.copyright {
+  font-size: .75em;
+  padding: 5px; }
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+footer ul li {
+  display: inline-block; }
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+  margin: 0px 5px; }
+
+a.twitter {
+  background-image: url(../images/twitter.svg); }
+
+a.linkedin {
+  background-image: url(../images/linkedin.svg); }
+
+a.github {
+  background-image: url(../images/github.svg); }
+
+a.social:hover {
+  opacity: 1;
+  transform: scale(1.25); }
+
+/*# sourceMappingURL=main.css.map */

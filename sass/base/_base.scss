@@ -1,0 +1,27 @@
+/* Base Styles */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    background: url('../images/tile.jpg') top left repeat;
+}
+
+.wrapper {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #ff9904;
+}

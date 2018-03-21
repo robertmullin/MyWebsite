@@ -1,0 +1,56 @@
+/* Navigation Styles */
+
+.main-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: black;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    list-style-type: none;
+    @media (min-width: $break-sm) {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+.nav .name {
+    display: none;
+    margin-right: auto;
+    color: white;
+    @media (min-width: $break-sm) {
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+.nav li {
+    padding: 5px 10px;
+}
+
+.nav a {
+    transition: all .5s;
+}
+
+.nav a:hover {
+    color: white
+}
+
+header {
+    text-align: center;
+    padding-top: 50px;
+    line-height: 1.5;
+}

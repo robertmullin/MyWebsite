@@ -1,0 +1,53 @@
+/* Hero Styles */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url("../images/torontoMobile-min.jpg") no-repeat top center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 450px;
+    @media (min-width: $break-sm) {
+        width: 100%;
+        height: 550px;
+        background: url("../images/torontobackground-min.jpg");
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+}
+
+.profile-image {
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: all .5s;
+    @media (min-width: $break-sm) {
+        margin: 2em;
+    }
+}
+
+.profile-image:hover {
+    transform: scale(1.25) rotate(360deg);
+}
+
+.tag {
+    background-color: #efefef;
+    color: #222;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.location {
+    background-color: #222;
+    color: #efefef;
+}
