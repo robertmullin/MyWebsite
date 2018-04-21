@@ -9,6 +9,15 @@ footer {
     font-size: 1.3em;
     width: 100%;
     margin: 10px auto;
+    @media (min-width: $break-sm) {
+        max-width: 768px;
+        margin: 0 auto;
+        padding: .5em 1em;
+    }
+    @media (min-width: $break-lg) {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
 }
 
 .copyright {

@@ -9,6 +9,10 @@
     @media (min-width: $break-sm) {
         flex-direction: row;
     }
+    @media (min-width: $break-lg) {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
 }
 
 .card {
@@ -29,18 +33,21 @@
     @media (min-width: $break-sm) {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         flex-wrap: wrap;
     }
+
 }
 
 .card:hover {
-    border-bottom: 3px solid #000;
+    border-bottom: 4px solid #000;
 }
 
 .card h2,
 .card p {
     padding: 10px;
+    align-self: flex-start;
+    width: 100%;
 }
 
 ul.skills {

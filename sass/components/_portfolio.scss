@@ -10,6 +10,7 @@
     @media (min-width: $break-sm) {
         width: 45%;
     }
+
 }
 
 .portInfo {
@@ -18,7 +19,10 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 1.2em;
+    padding: 0em 1.2em;
+    @media (min-width: $break-lg) {
+        padding: .5em 1.2em;
+    }
 }
 
 .portInfo h2 {
@@ -53,4 +57,106 @@
     padding: 10px 0px;
     opacity: .5;
     position: relative;
+}
+
+#testimonial {
+    width: 95%;
+    @media (min-width: $break-sm) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* Slideshow container */
+
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1;
+    width: 100%;
+    height: 300px;
+}
+
+/* Slides */
+
+.mySlides {
+    display: none;
+    padding: 5em;
+    text-align: center;
+    width: 100%;
+}
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin: 0 auto;
+    padding: 16px;
+    color: #888;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+
+.next {
+    position: absolute;
+    right: 0;
+    border-radius: 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* The dot/bullet/indicator container */
+
+.dot-container {
+    text-align: center;
+    padding: 5px;
+    width: 20%;
+}
+
+/* The dots/bullets/indicators */
+
+.dot {
+    cursor: pointer;
+    height: .5em;
+    width: .5em;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+
+q {
+    font-style: italic;
+}
+
+/* Add a blue color to the author */
+
+.author {
+    color: cornflowerblue;
 }

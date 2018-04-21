@@ -13,7 +13,7 @@ body {
   background: url("../images/tile.jpg") top left repeat; }
 
 .wrapper {
-  max-width: 100%;
+  width: 100%;
   overflow: hidden; }
 
 a {
@@ -46,6 +46,11 @@ a {
     .nav {
       width: 100%;
       justify-content: flex-end; } }
+  @media (min-width: 1024px) {
+    .nav {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 0px 1em; } }
 
 .nav .name {
   display: none;
@@ -104,9 +109,6 @@ header {
     .profile-image {
       margin: 2em; } }
 
-.profile-image:hover {
-  transform: scale(1.25) rotate(360deg); }
-
 .tag {
   background-color: #efefef;
   color: #222;
@@ -128,6 +130,10 @@ header {
   @media (min-width: 480px) {
     .container {
       flex-direction: row; } }
+  @media (min-width: 1024px) {
+    .container {
+      max-width: 1024px;
+      margin: 0 auto; } }
 
 .card {
   width: 95%;
@@ -147,15 +153,17 @@ header {
     #xp {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap; } }
 
 .card:hover {
-  border-bottom: 3px solid #000; }
+  border-bottom: 4px solid #000; }
 
 .card h2,
 .card p {
-  padding: 10px; }
+  padding: 10px;
+  align-self: flex-start;
+  width: 100%; }
 
 ul.skills {
   padding: 0;
@@ -190,7 +198,10 @@ ul.skills {
   left: 0;
   bottom: 0;
   width: 100%;
-  padding: 1.2em; }
+  padding: 0em 1.2em; }
+  @media (min-width: 1024px) {
+    .portInfo {
+      padding: .5em 1.2em; } }
 
 .portInfo h2 {
   font-family: 'Roboto', sans-serif;
@@ -222,9 +233,99 @@ ul.skills {
   opacity: .5;
   position: relative; }
 
+#testimonial {
+  width: 95%; }
+  @media (min-width: 480px) {
+    #testimonial {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap; } }
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1;
+  width: 100%;
+  height: 300px; }
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 5em;
+  text-align: center;
+  width: 100%; }
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin: 0 auto;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none; }
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white; }
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 5px;
+  width: 20%; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: .5em;
+  width: .5em;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+/* Add a background color to the active dot/circle */
+.active,
+.dot:hover {
+  background-color: #717171; }
+
+/* Add an italic font style to all quotes */
+q {
+  font-style: italic; }
+
+/* Add a blue color to the author */
+.author {
+  color: cornflowerblue; }
+
 /* CONTACT FORM STYLES */
 .contactCard {
   display: none; }
+  @media (min-width: 480px) {
+    .contactCard {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center; } }
+
+.contactimg {
+  width: 95%;
+  padding: .5em 0em; }
 
 form {
   display: flex;
@@ -232,6 +333,7 @@ form {
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 100%;
   font-family: 'Roboto', sans-serif; }
 
 form label {
@@ -259,17 +361,26 @@ form textarea:focus {
 
 button {
   width: 95%;
-  padding: 10px;
-  margin: 10px 0px;
+  padding: .5em 0em;
+  margin: 1em .5em .5em .5em;
   background: #666666;
   border: 0;
   font-size: 1.25em;
   color: #FFFFFF;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: ease-in-out .5s; }
+  @media (min-width: 1024px) {
+    button {
+      margin: 2.5em .5em 0em .5em; } }
 
-.contactimg {
-  width: 100%;
-  height: 300px; }
+button:hover {
+  background: #000;
+  color: #ff9904;
+  transition: ease-in-out .5s; }
+
+@media (min-width: 480px) {
+  #contactMe1 {
+    display: none; } }
 
 /* Footer Styles */
 footer {
@@ -281,6 +392,15 @@ footer {
   font-size: 1.3em;
   width: 100%;
   margin: 10px auto; }
+  @media (min-width: 480px) {
+    footer {
+      max-width: 768px;
+      margin: 0 auto;
+      padding: .5em 1em; } }
+  @media (min-width: 1024px) {
+    footer {
+      max-width: 1024px;
+      margin: 0 auto; } }
 
 .copyright {
   font-size: .75em;
